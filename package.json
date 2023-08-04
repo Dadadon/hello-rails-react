@@ -2,7 +2,8 @@
   "name": "app",
   "private": "true",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint . --ext .js,.jsx"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -31,6 +32,9 @@
     "redux": "^4.2.1"
   },
   "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "webpack-cli": "^5.1.4"
   }
 }
