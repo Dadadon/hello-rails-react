@@ -3,20 +3,18 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import Greeting from './Greeting';
+import App from '../App'; // Import the correct path to your App component
 
-const App = () => {
-  return (
+document.addEventListener('DOMContentLoaded', () => {
+  const rootElement = document.getElementById('root');
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
     <Router>
       <Provider store={store}>
         <Switch>
-          <Route exact path="/" component={Greeting} />
+          <Route exact path="/" element={<App />} />
         </Switch>
       </Provider>
     </Router>
   );
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<App />, document.getElementById('root'));
 });
